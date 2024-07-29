@@ -8,8 +8,8 @@ Created on Sun Jul 28 22:19:47 2024
 from datetime import datetime
 from meteostat import Hourly
 import pandas as pd
-exec(open('C:/Life/5- Career & Business Development/Learning/Python Practice/Generic Codes/notion_corrections.py').read())
-exec(open('C:\Life\5- Career & Business Development\Learning\Python Practice\Stata_Python_Booster\PhD - QFF\Code\source_clustering\indoor_pm_data_read_in.py').read())
+exec(open('C:\PhD Research\Generic Codes\notion_corrections.py').read())
+exec(open('C:\PhD Research\Airborne\Code\source_clustering\indoor_pm_data_read_in.py').read())
 
 
 ### Reading climate data for wind data access
