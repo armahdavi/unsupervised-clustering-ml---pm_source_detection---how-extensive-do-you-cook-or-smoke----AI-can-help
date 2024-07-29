@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jul 28 22:19:47 2024
+Program to read in climate data from the meteostat to merge wind data into other PM data
 
 @author: alima
 """
