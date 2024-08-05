@@ -6,11 +6,10 @@ Program to read in and organize urban PM2.5 concentrations in Toronto
 """
 
 import pandas as pd
-exec(open('C:/Life/5- Career & Business Development/Learning/Python Practice/Generic Codes/notion_corrections.py').read())
-
+exec(open('C:/PhD Research/Generic Codes/notion_corrections.py').read())
 
 ### Reading PM2.5 data, reframing, and refining (downloaded from 'https://www.airqualityontario.com/history/pollutant.php?stationid=31103&pol_code=124' website)
-df = pd.read_csv(backslash_correct(r'C:\Life\5- Career & Business Development\Learning\Python Practice\Stata_Python_Booster\PhD - QFF\Raw\pm25.csv'), skiprows = 10)
+df = pd.read_csv(backslash_correct(r'C:\PhD Research\Airborne\Raw\pm25.csv'), skiprows = 10)
 df = df[['Pollutant', 'Date', 'H01', 'H02', 'H03', 'H04', 'H05',
          'H06', 'H07', 'H08', 'H09', 'H10', 'H11', 'H12', 'H13', 'H14', 'H15',
          'H16', 'H17', 'H18', 'H19', 'H20', 'H21', 'H22', 'H23', 'H24']]
