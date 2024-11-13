@@ -60,8 +60,10 @@ for n in range(int(len(df)/1500)):
     legend.get_frame().set_edgecolor("black")  
     plt.show()
 
+#####################################
+### Step 2: Wind Data Calculation ###
+#####################################
 
-### Step 2: Wind Data Calculation
 station_id = '72219'
 start_date = datetime(year = 2018, month = 7, day = 18)
 end_date = datetime(year = 2018, month = 8, day = 29)
