@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Trials of making time-series data smooth by Exponentially Weighted Average (EWA)
+Trials for making time-series data smooth by Exponentially Weighted Average (EWA)
 
 @author: alima
 """
