@@ -16,10 +16,10 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import scipy
-exec(open('C:/Life/5- Career & Business Development/Learning/Python Practice/Generic Codes/notion_corrections.py').read())
+exec(open(r':/PhD Research/Generic Codes/notion_corrections.py').read())
 
 ## Reading PM data
-df = pd.read_excel(backslash_correct(r'C:\Life\5- Career & Business Development\Learning\Python Practice\Stata_Python_Booster\PhD - QFF\Processed\dt_drx.xlsx'))
+df = pd.read_excel(backslash_correct(r'C:\PhD Research\Airborne\Processed\dt_drx.xlsx'))
 df = df[df['visit'] != 5]
 df.rename(columns = {'Date': 'Time'}, inplace = True)
 df.drop('visit', axis = 1, inplace = True)
