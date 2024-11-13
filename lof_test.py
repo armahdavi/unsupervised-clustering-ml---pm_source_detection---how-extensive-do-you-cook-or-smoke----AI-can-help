@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jun 27 15:59:31 2024
+Testing LocalOutlierFactor over some randomly generated data
 
 @author: alima
 """
 
 import numpy as np
+from sklearn.neighbors import LocalOutlierFactor
+import matplotlib.pyplot as plt
+
 
 # Generate baseline traffic with some randomness
 base_traffic = 1000 + 100 * np.random.randn(365)
@@ -23,10 +26,6 @@ base_traffic[weekend_days] *= 0.7
 
 # Combine baseline and weekend traffic
 traffic_data = base_traffic.copy()
-
-
-
-from sklearn.neighbors import LocalOutlierFactor
 
 # Set the number of neighbors (k)
 n_neighbors = 20
@@ -49,10 +48,6 @@ outlier_indices = traffic_data[outlier_labels < threshold].tolist()
 print("Outlier traffic days:", outlier_indices)
 
 #############################################
-
-
-import matplotlib.pyplot as plt
-import numpy as np
 
 # Generate baseline traffic with some randomness
 base_traffic = 1000 + 100 * np.random.randn(365)
@@ -112,12 +107,3 @@ plt.title(title)
 plt.legend()
 plt.grid(True)
 plt.show()
-
-
-
-
-
-
-
-
-
