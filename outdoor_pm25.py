@@ -38,4 +38,4 @@ df.columns = ['Time', 'PM2.5']
 df.set_index('Time', inplace=True)
 df_resampled = df.resample('1T').fillna(method = 'nearest')
 df_resampled = df_resampled.reset_index()
-df_resampled.to_excel(backslash_correct(r'C:\Life\5- Career & Business Development\Learning\Python Practice\Stata_Python_Booster\PhD - QFF\Processed\outdoor_pm25.xlsx'), index = False)
+df_resampled.to_excel(backslash_correct(r'C:\PhD Research\Airborne\Processed\outdoor_pm25.xlsx'), index = False)
