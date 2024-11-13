@@ -6,7 +6,7 @@ Program to read in PM data recorded by DustTrak DRX and merge with outdoor PM2.5
 """
 
 import pandas as pd
-exec(open(':\PhD Research\Generic Codes/notion_corrections.py').read())
+exec(open(r':/PhD Research/Generic Codes/notion_corrections.py').read())
 
 ### Reading DustTrak PM2.5 data and refining
 df = pd.read_excel(backslash_correct(r'C:\PhD Research\Airborne\Processed\dt_drx.xlsx'))
