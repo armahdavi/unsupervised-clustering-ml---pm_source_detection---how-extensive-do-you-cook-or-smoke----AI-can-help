@@ -18,13 +18,13 @@ from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import DBSCAN
-exec(open('C:/Life/5- Career & Business Development/Learning/Python Practice/Generic Codes/notion_corrections.py').read())
+exec(open(r':/PhD Research/Generic Codes/notion_corrections.py').read())
 
 ###############################################################################
 ### Step 1: Feature engineering/selection and paraneter/function initiation ###
 ###############################################################################
 
-df = pd.read_excel(backslash_correct(r'C:\Life\5- Career & Business Development\Learning\Python Practice\Stata_Python_Booster\PhD - QFF\Processed\pm_source_clustering_ml_master.xlsx'))
+df = pd.read_excel(backslash_correct(r'C:\PhD Research\Airborne\Processed\pm_source_clustering_ml_master.xlsx'))
 cols_keep = ['PM2.5_smooth', 'Der C', 'PM2.5_OD', 'Proximity to Baseline', 'Nearest Peak Proximity', 'I/O', 'wdir', 'wspd', 'Mode']
 df = df[cols_keep]
 df.dropna(inplace = True)
@@ -60,7 +60,7 @@ plt.suptitle('Scatter Matrix of Features', y = 1.02)  # Add a title
 # Set axis labels and title with custom font sizes
 plt.xticks(fontsize = 4)
 plt.yticks(fontsize = 4)
-plt.savefig(r'C:\Life\5- Career & Business Development\Learning\Python Practice\Stata_Python_Booster\PhD - QFF\Processed\plots\correlational_matrix.jpg', format = 'jpg', dpi = 1600, bbox_inches = 'tight')
+plt.savefig(r'r'C:\PhD Research\Airborne\Processed\plots\correlational_matrix.jpg', format = 'jpg', dpi = 1600, bbox_inches = 'tight')
 plt.show()
 
 
@@ -317,7 +317,7 @@ tsne_df['cluster'].replace(clusters, inplace = True)
 
 tsne_df = pd.concat([df, tsne_df['cluster']], axis = 1)
 tsne_df.dropna(inplace = True)
-tsne_df.to_excel(backslash_correct(r'C:\Life\5- Career & Business Development\Learning\Python Practice\Stata_Python_Booster\PhD - QFF\Processed\tsne_two_comp.xlsx'), index = False) # Saving t-SNE results as t-SNE runtime is really long
+tsne_df.to_excel(backslash_correct(r'C:\PhD Research\Airborne\Processed\tsne_two_comp.xlsx'), index = False) # Saving t-SNE results as t-SNE runtime is really long
 
 graph_plotter(pca_df_kde)
 
