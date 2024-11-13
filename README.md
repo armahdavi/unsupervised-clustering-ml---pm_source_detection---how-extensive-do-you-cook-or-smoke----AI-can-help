@@ -1,5 +1,5 @@
 # Unsupervised Clustering Machine Learning (ML) to Estimate Indoor PM Source Duration 
-## How much do you cook or smoke indoors?
+## How long do you cook or smoke indoors?
 
 Combustion activities such as cooking or smoking are significant contributors to indoor particulate matter (PM) emissions. Given we spend a substantial portion of our lives indoors (> 85%), primarily at home, understanding and identifying combustion-driven PM sources is crucial. Determining the duration and intensity of these activities enables us to assess the urgency of developing effective exposure mitigation strategies—such as reducing smoke or cook time and using a range hood—to address airborne particulate matter (PM) exposure. PM poses significant long-term health risks, including lung cancer, heart disease, asthma exacerbation, and premature death.
 
