@@ -22,20 +22,20 @@ from datetime import datetime # Meteostat module to calculate wind direction and
 from meteostat import Hourly
 from scipy.signal import savgol_filter, find_peaks
 from sklearn.neighbors import LocalOutlierFactor
-exec(open('C:/Life/5- Career & Business Development/Learning/Python Practice/Generic Codes/notion_corrections.py').read())
+exec(open(r':/PhD Research/Generic Codes/notion_corrections.py').read())
 
 #######################################
 ### Step 1: Initial Data Extraction ###
 #######################################
 
 ## Reading PM initial data from DustTrack
-df = pd.read_excel(backslash_correct(r'C:\Life\5- Career & Business Development\Learning\Python Practice\Stata_Python_Booster\PhD - QFF\Processed\dt_drx.xlsx'))
+df = pd.read_excel(backslash_correct(r'C:\PhD Research\Airborne\Processed\dt_drx.xlsx'))
 df = df[df['visit'] != 5]
 df.rename(columns = {'Date': 'Time'}, inplace = True)
 df.drop('visit', axis = 1, inplace = True)
 
 ## Reading Outdoor PM data
-odpm = pd.read_excel(backslash_correct(r'C:\Life\5- Career & Business Development\Learning\Python Practice\Stata_Python_Booster\PhD - QFF\Processed\outdoor_pm25.xlsx'))
+odpm = pd.read_excel(backslash_correct(r'C:\PhD Research\Airborne\Processed\outdoor_pm25.xlsx'))
 df = pd.merge(df, odpm, on = 'Time', how = 'inner')
 df.rename(columns = {'PM2.5_x': 'PM2.5', 'PM2.5_y': 'PM2.5_OD'}, inplace = True)
 
@@ -258,7 +258,7 @@ plt.show()
 ### Step 5: HVAC runtime and HVAC loss ###
 ##########################################
 
-rt = pd.read_excel(backslash_correct(r'C:\Life\5- Career & Business Development\Learning\Python Practice\Stata_Python_Booster\PhD - QFF\Processed\runtime_master.xlsx'))
+rt = pd.read_excel(backslash_correct(r'r'C:\PhD Research\Airborne\Processed\runtime_master.xlsx'))
 rt = rt[['Time', 'Mode']]
 rt['Mode'].replace({'Off': 0,
                     'Transient': 1,
@@ -266,5 +266,5 @@ rt['Mode'].replace({'Off': 0,
                     'Compressor': 3}, inplace = True)
 
 df = pd.merge(df, rt, on = 'Time', how = 'left')
-df.to_excel(backslash_correct(r'C:\Life\5- Career & Business Development\Learning\Python Practice\Stata_Python_Booster\PhD - QFF\Processed\pm_source_clustering_ml_master.xlsx'), index = False)
+df.to_excel(backslash_correct(r'r'C:\PhD Research\Airborne\Processed\pm_source_clustering_ml_master.xlsx'), index = False)
 
